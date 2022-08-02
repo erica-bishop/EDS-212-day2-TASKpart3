@@ -55,3 +55,20 @@ eval(function_Cprime)
 
 ```
 
+
+###Penguin Plot Practice
+
+```{r}
+
+ggplot(data = penguins, aes(x = species, y = flipper_length_mm)) +
+  geom_jitter(size = 0.5) +
+  labs(x = "Penguin Species",
+       y = "Flipper Length (mm)") +
+  labs(title = "FLipper length of Adelie, Gentoo, and Chinstrap Penguins (in mm)") +
+  theme_gray()
+
+  
+
+
+
+```
