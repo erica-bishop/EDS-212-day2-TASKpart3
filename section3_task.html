@@ -370,7 +370,55 @@ pre code {
 </div>
 
 
+<pre class="r"><code>library(palmerpenguins)
+library(tidyverse)</code></pre>
+<pre><code>## ── Attaching packages ─────────────────────────────────────── tidyverse 1.3.2 ──
+## ✔ ggplot2 3.3.6     ✔ purrr   0.3.4
+## ✔ tibble  3.1.8     ✔ dplyr   1.0.9
+## ✔ tidyr   1.2.0     ✔ stringr 1.4.0
+## ✔ readr   2.1.2     ✔ forcats 0.5.1
+## ── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+## ✖ dplyr::filter() masks stats::filter()
+## ✖ dplyr::lag()    masks stats::lag()</code></pre>
+<pre class="r"><code>### usethis::use_git()
+###usethis::use_github()</code></pre>
+<p>##Find the derivative expression and slope for each of the following
+functions: A. <span class="math inline">\(f(x) = x^2\)</span> at <span class="math inline">\(x=2\)</span> B. <span class="math inline">\(P(a) =
+2(3a + 2)^4 - 5\)</span> at <span class="math inline">\(a = 1.2\)</span>
+C. <span class="math inline">\(g(t) = (-4t)/(t^2+1)^3\)</span> at <span class="math inline">\(t = 0\)</span></p>
+<pre class="r"><code>#A
+functionA &lt;- expression(x^2)
+functionA_prime &lt;- deriv(functionA, &quot;x&quot;)
 
+x &lt;- 3
+
+eval(functionA_prime)</code></pre>
+<pre><code>## [1] 9
+## attr(,&quot;gradient&quot;)
+##      x
+## [1,] 6</code></pre>
+<pre class="r"><code>functionB &lt;- expression(2*(a + 2)^4 - 5)
+functionB</code></pre>
+<pre><code>## expression(2 * (a + 2)^4 - 5)</code></pre>
+<pre class="r"><code>functionB_prime &lt;- deriv(functionB, &quot;a&quot;)
+
+a &lt;- 1.2
+
+eval(functionA_prime)</code></pre>
+<pre><code>## [1] 9
+## attr(,&quot;gradient&quot;)
+##      x
+## [1,] 6</code></pre>
+<pre class="r"><code>function_C &lt;- expression((-4*t)/(t^2+1))
+function_Cprime &lt;- deriv(function_C, &quot;t&quot;)
+
+t &lt;- 0
+
+eval(function_Cprime)</code></pre>
+<pre><code>## [1] 0
+## attr(,&quot;gradient&quot;)
+##       t
+## [1,] -4</code></pre>
 
 
 
